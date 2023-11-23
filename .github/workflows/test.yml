@@ -15,7 +15,8 @@ jobs:
     steps:
       - name: Say Hello
         run: echo 'Hello peeps from the pipeline!'
-
+      - name: echo secret
+        run: echo ${{ secrets.PASSWORD }}
   test-utils:
     runs-on: ubuntu-latest
     steps:
